@@ -19,7 +19,7 @@
     <properties>
         <scala.compat.version>2.12</scala.compat.version>
         <scala.version>${scala.compat.version}.8</scala.version>
-        <scala-maven-plugin.version>4.2.0</scala-maven-plugin.version>
+        <scala-maven-plugin.version>4.3.0</scala-maven-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <specs2.version>4.8.1</specs2.version>
         <scalaz.version>7.2.27</scalaz.version>
@@ -66,6 +66,11 @@
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
                     <version>${scala-maven-plugin.version}</version>
+                    <configuration>
+                        <excludes>
+                            <exclude>**/*.java</exclude>
+                        </excludes>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>Scala Classes</id>
